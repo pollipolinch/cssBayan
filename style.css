@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: rgb(179, 202, 224);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.bayan {
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: gray;
+}
+
+.mem-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mem-text {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: blue;
+    transition: 0.5s;
+}
+
+.cross {
+    width: 20px;
+    display: none;
+    margin-top: 10px;
+}
+.plus{
+    width: 20px;
+    display: none;
+    margin-top: 10px;
+}
+
+.mem-img {
+    width: 50%;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: none;
+}
+
+.bayan:hover .mem-text {
+    color: black;
+    transition: 1s;
+}
+
+.bayan:hover .plus {
+    display: block;
+}
+
+.mem:hover .mem-img {
+    display: block;
+}
+.mem:hover .plus {
+    transform: rotate(45deg);
+}
