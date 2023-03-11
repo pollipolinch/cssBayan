@@ -1,33 +1,18 @@
 body {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Inika', serif;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-*,
-*:before,
-*:after {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    background: rgb(179, 202, 224);
+    font-size: 0.63rem;
 }
 
 .container {
-    max-width: 1920px;
-    margin: 0 auto;
-    background: rgb(179, 202, 224);
+    max-width: 90rem;
+    margin: auto;
     height: 100vh;
     display: flex;
     align-items: center;
+}
+
+input {
+    display: none;
 }
 
 
@@ -38,11 +23,28 @@ body {
     margin-top: 40px;
 }
 
-.line {
-    height: 1px;
-    width: 100%;
-    background: gray;
+.joke {
+    border-top: 0.001rem solid gray;
 }
+
+.joke:has(input:checked) .plus {
+    transform: rotate(45deg);
+}
+
+.joke:has(label:active).joke {
+    filter: grayscale(80%);
+}
+
+.joke:has(input:checked) .body-bayan {
+    height: 20rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.joke:has(input:checked) .mem-text {
+    color: black;
+}
+
 
 .mem-container {
     display: flex;
@@ -50,46 +52,68 @@ body {
 }
 
 .mem-text {
-    font-size: 24px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1px;
     font-weight: 600;
     color: blue;
     transition: 0.5s;
 }
 
-.cross {
-    width: 20px;
-    display: none;
+.plus {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
     margin-top: 10px;
 }
-.plus{
-    width: 20px;
-    display: none;
-    margin-top: 10px;
+
+.body-bayan {
+    display: block;
+    height: 20rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+    cursor: pointer;
 }
+
+.body img {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
 
 .mem-img {
-    width: 50%;
+    height: 18rem;
+    width: 24rem;
     display: block;
     margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: none;
 }
 
-.bayan:hover .mem-text {
-    color: black;
-    transition: 1s;
-}
+@media (hover: hover) {
+    .bayan:not(:hover) .plus {
+        opacity: 0;
+        transition: 0.3s;
+    }
 
-.bayan:hover .plus {
-    display: block;
-}
+    .bayan:not(:hover) .mem-text {
+        color: black;
+    }
 
-.mem:hover .mem-img {
-    display: block;
-}
-.mem:hover .plus {
-    transform: rotate(45deg);
+    .joke:not(:hover) .body-bayan {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .joke:not(:hover) .plus {
+        transform: rotate(0deg);
+        transition: transform 0.5s;
+    }
+
+    .body-bayan span:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
 }
