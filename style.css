@@ -6,17 +6,16 @@ body {
     font-size: 4rem;
 }
 
-input {
-    display: none;
-}
+
 
 .bayan {
     max-width: 85rem;
     margin: auto;
     cursor: pointer;
 }
-
-
+input {
+    display: none;
+}
 
 .joke:has(input:checked) .plus {
     transform: rotate(45deg);
@@ -28,15 +27,12 @@ input {
     visibility: visible;
 }
 
-
 .mem-container {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
-.joke {
-    border-top: 0.002rem solid gray;
-}
+
 
 .plus {
     display: block;
@@ -47,6 +43,9 @@ input {
 }
 .joke:has(input:checked) .mem-text {
     color: black;
+}
+.joke {
+    border-top: 0.002rem solid gray;
 }
 
 .body-bayan {
@@ -176,8 +175,6 @@ input {
     }
 
 }
-
-
 @media (max-device-width: 320px) {
     .joke:has(input:checked) .body-bayan {
         height: 10rem;
