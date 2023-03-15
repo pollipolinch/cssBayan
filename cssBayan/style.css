@@ -1,0 +1,241 @@
+body {
+    background: rgb(179, 202, 224);
+}
+
+.title {
+    font-size: 4rem;
+}
+
+
+.bayan {
+    width: 90vw;
+    margin: auto;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+.joke:has(input:checked) .plus {
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.joke:has(input:checked) .body-bayan {
+    height: 27rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.mem-container {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.plus {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
+    margin-top: 2%;
+}
+
+.joke:has(input:checked) .mem-text {
+    color: black;
+}
+
+.joke {
+    border-top: 0.002rem solid gray;
+}
+
+.body-bayan {
+    display: block;
+    height: 27rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.mem-img {
+    height: 24rem;
+    width: 30rem;
+    display: block;
+    margin: auto;
+}
+
+.mem-text {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: black;
+    transition: 0.5s;
+}
+.top:active img {
+    filter: opacity(50%);
+}
+
+.top:active .mem-text  {
+    color: rgb(67, 67, 73) !important;
+    transition: 0s;
+  }
+
+.top:active .plus {
+    fill: rgb(67, 67, 73) !important;
+    transition: 0s;
+}
+
+
+@media (hover: hover) {
+    .joke:not(:hover) .plus {
+        transform: rotate(0deg);
+        transition: 0.5s;
+    }
+
+    .bayan:not(:hover) .mem-text {
+        color: blue;
+    }
+
+    .joke:not(:hover) .body-bayan {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .mem-container:hover .plus {
+        transform: rotate(45deg);
+        transition: 1s;
+    }
+
+    .body-bayan:hover img {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    .bayan:not(:hover) .plus {
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+}
+
+@media (hover: none) and (max-device-width: 2089px) {
+
+    .joke:has(input:checked) .body-bayan {
+        height: 25rem;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s;
+    }
+
+
+    .mem-text {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        color: black;
+    }
+
+    .body-bayan {
+        display: block;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .plus {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .mem-img {
+        height: 18rem;
+        width: 20rem;
+        display: block;
+        margin: auto;
+    }
+
+    .bayan {
+        margin: auto;
+        max-width: 40rem;
+    }
+
+
+    .mem-text {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+}
+
+
+@media (max-device-width: 820px) {
+    .joke:has(input:checked) .body-bayan {
+        height: 20rem;
+    }
+}
+
+@media (max-device-width: 640px) {
+    .joke:has(input:checked) .body-bayan {
+        height: 12rem;
+    }
+
+    .mem-img {
+        height: 11rem;
+        width: 13rem;
+    }
+
+}
+
+@media (max-device-width: 320px) {
+    .joke:has(input:checked) .body-bayan {
+        height: 10rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .mem-text {
+        font-size: 1rem;
+    }
+
+    .mem-img {
+        height: 9rem;
+        width: 11rem;
+    }
+}
+
+@media (max-width: 820px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .mem-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 321px) {
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .mem-text {
+        font-size: 1rem;
+    }
+}
